@@ -1,9 +1,3 @@
-require('dotenv').config();
 const app = require('./app');
 const connectDB = require('./config/database');
-
-const PORT = process.env.PORT || 3000;
-
-connectDB().then(() => {
-  app.listen(PORT, () => console.log(`API running on port ${PORT}`));
-});
+connectDB().then(() => app.listen(process.env.PORT || 3000, () => console.log('API running')));
