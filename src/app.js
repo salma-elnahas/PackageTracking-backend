@@ -9,6 +9,6 @@ app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(express.json());
 // routes
 app.use('/api/auth', require('./routes/auth_routes'));
-   app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+app.use('/api/orders', require('./routes/order_routes'));
 module.exports = app;
 
