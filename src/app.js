@@ -10,5 +10,6 @@ app.use(express.json());
 // routes
 app.use('/api/auth', require('./routes/auth_routes'));
 app.use('/api/orders', require('./routes/order_routes'));
+app.use('/api/courier', require('./routes/courier_routes'));
 module.exports = app;
 
